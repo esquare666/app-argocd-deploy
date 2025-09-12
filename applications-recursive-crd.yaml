@@ -1,0 +1,1260 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata: <ObjectMeta> -required-
+  annotations: <map[string]string>
+  creationTimestamp: <string>
+  deletionGracePeriodSeconds: <integer>
+  deletionTimestamp: <string>
+  finalizers: <[]string>
+  generateName: <string>
+  generation: <integer>
+  labels: <map[string]string>
+  managedFields: <[]ManagedFieldsEntry>
+    apiVersion: <string>
+    fieldsType: <string>
+    fieldsV1: <FieldsV1>
+    manager: <string>
+    operation: <string>
+    subresource: <string>
+    time: <string>
+  name: <string>
+  namespace: <string>
+  ownerReferences: <[]OwnerReference>
+    apiVersion: <string> -required-
+    blockOwnerDeletion: <boolean>
+    controller: <boolean>
+    kind: <string> -required-
+    name: <string> -required-
+    uid: <string> -required-
+  resourceVersion: <string>
+  selfLink: <string>
+  uid: <string>
+operation: <Object>
+  info: <[]Object>
+    name: <string> -required-
+    value: <string> -required-
+  initiatedBy: <Object>
+    automated: <boolean>
+    username: <string>
+  retry: <Object>
+    backoff: <Object>
+      duration: <string>
+      factor: <integer>
+      maxDuration: <string>
+    limit: <integer>
+  sync: <Object>
+    autoHealAttemptsCount: <integer>
+    dryRun: <boolean>
+    manifests: <[]string>
+    prune: <boolean>
+    resources: <[]Object>
+      group: <string>
+      kind: <string> -required-
+      name: <string> -required-
+      namespace: <string>
+    revision: <string>
+    revisions: <[]string>
+    source: <Object>
+      chart: <string>
+      directory: <Object>
+        exclude: <string>
+        include: <string>
+        jsonnet: <Object>
+          extVars: <[]Object>
+            code: <boolean>
+            name: <string> -required-
+            value: <string> -required-
+          libs: <[]string>
+          tlas: <[]Object>
+            code: <boolean>
+            name: <string> -required-
+            value: <string> -required-
+        recurse: <boolean>
+      helm: <Object>
+        apiVersions: <[]string>
+        fileParameters: <[]Object>
+          name: <string>
+          path: <string>
+        ignoreMissingValueFiles: <boolean>
+        kubeVersion: <string>
+        namespace: <string>
+        parameters: <[]Object>
+          forceString: <boolean>
+          name: <string>
+          value: <string>
+        passCredentials: <boolean>
+        releaseName: <string>
+        skipCrds: <boolean>
+        skipSchemaValidation: <boolean>
+        skipTests: <boolean>
+        valueFiles: <[]string>
+        values: <string>
+        valuesObject: <Object>
+        version: <string>
+      kustomize: <Object>
+        apiVersions: <[]string>
+        commonAnnotations: <map[string]string>
+        commonAnnotationsEnvsubst: <boolean>
+        commonLabels: <map[string]string>
+        components: <[]string>
+        forceCommonAnnotations: <boolean>
+        forceCommonLabels: <boolean>
+        ignoreMissingComponents: <boolean>
+        images: <[]string>
+        kubeVersion: <string>
+        labelIncludeTemplates: <boolean>
+        labelWithoutSelector: <boolean>
+        namePrefix: <string>
+        nameSuffix: <string>
+        namespace: <string>
+        patches: <[]Object>
+          options: <map[string]boolean>
+          patch: <string>
+          path: <string>
+          target: <Object>
+            annotationSelector: <string>
+            group: <string>
+            kind: <string>
+            labelSelector: <string>
+            name: <string>
+            namespace: <string>
+            version: <string>
+        replicas: <[]Object>
+          count: <Object> -required-
+          name: <string> -required-
+        version: <string>
+      name: <string>
+      path: <string>
+      plugin: <Object>
+        env: <[]Object>
+          name: <string> -required-
+          value: <string> -required-
+        name: <string>
+        parameters: <[]Object>
+          array: <[]string>
+          map: <map[string]string>
+          name: <string>
+          string: <string>
+      ref: <string>
+      repoURL: <string> -required-
+      targetRevision: <string>
+    sources: <[]Object>
+      chart: <string>
+      directory: <Object>
+        exclude: <string>
+        include: <string>
+        jsonnet: <Object>
+          extVars: <[]Object>
+            code: <boolean>
+            name: <string> -required-
+            value: <string> -required-
+          libs: <[]string>
+          tlas: <[]Object>
+            code: <boolean>
+            name: <string> -required-
+            value: <string> -required-
+        recurse: <boolean>
+      helm: <Object>
+        apiVersions: <[]string>
+        fileParameters: <[]Object>
+          name: <string>
+          path: <string>
+        ignoreMissingValueFiles: <boolean>
+        kubeVersion: <string>
+        namespace: <string>
+        parameters: <[]Object>
+          forceString: <boolean>
+          name: <string>
+          value: <string>
+        passCredentials: <boolean>
+        releaseName: <string>
+        skipCrds: <boolean>
+        skipSchemaValidation: <boolean>
+        skipTests: <boolean>
+        valueFiles: <[]string>
+        values: <string>
+        valuesObject: <Object>
+        version: <string>
+      kustomize: <Object>
+        apiVersions: <[]string>
+        commonAnnotations: <map[string]string>
+        commonAnnotationsEnvsubst: <boolean>
+        commonLabels: <map[string]string>
+        components: <[]string>
+        forceCommonAnnotations: <boolean>
+        forceCommonLabels: <boolean>
+        ignoreMissingComponents: <boolean>
+        images: <[]string>
+        kubeVersion: <string>
+        labelIncludeTemplates: <boolean>
+        labelWithoutSelector: <boolean>
+        namePrefix: <string>
+        nameSuffix: <string>
+        namespace: <string>
+        patches: <[]Object>
+          options: <map[string]boolean>
+          patch: <string>
+          path: <string>
+          target: <Object>
+            annotationSelector: <string>
+            group: <string>
+            kind: <string>
+            labelSelector: <string>
+            name: <string>
+            namespace: <string>
+            version: <string>
+        replicas: <[]Object>
+          count: <Object> -required-
+          name: <string> -required-
+        version: <string>
+      name: <string>
+      path: <string>
+      plugin: <Object>
+        env: <[]Object>
+          name: <string> -required-
+          value: <string> -required-
+        name: <string>
+        parameters: <[]Object>
+          array: <[]string>
+          map: <map[string]string>
+          name: <string>
+          string: <string>
+      ref: <string>
+      repoURL: <string> -required-
+      targetRevision: <string>
+    syncOptions: <[]string>
+    syncStrategy: <Object>
+      apply: <Object>
+        force: <boolean>
+      hook: <Object>
+        force: <boolean>
+spec: <Object> -required-
+  destination: <Object> -required-
+    name: <string>
+    namespace: <string>
+    server: <string>
+  ignoreDifferences: <[]Object>
+    group: <string>
+    jqPathExpressions: <[]string>
+    jsonPointers: <[]string>
+    kind: <string> -required-
+    managedFieldsManagers: <[]string>
+    name: <string>
+    namespace: <string>
+  info: <[]Object>
+    name: <string> -required-
+    value: <string> -required-
+  project: <string> -required-
+  revisionHistoryLimit: <integer>
+  source: <Object>
+    chart: <string>
+    directory: <Object>
+      exclude: <string>
+      include: <string>
+      jsonnet: <Object>
+        extVars: <[]Object>
+          code: <boolean>
+          name: <string> -required-
+          value: <string> -required-
+        libs: <[]string>
+        tlas: <[]Object>
+          code: <boolean>
+          name: <string> -required-
+          value: <string> -required-
+      recurse: <boolean>
+    helm: <Object>
+      apiVersions: <[]string>
+      fileParameters: <[]Object>
+        name: <string>
+        path: <string>
+      ignoreMissingValueFiles: <boolean>
+      kubeVersion: <string>
+      namespace: <string>
+      parameters: <[]Object>
+        forceString: <boolean>
+        name: <string>
+        value: <string>
+      passCredentials: <boolean>
+      releaseName: <string>
+      skipCrds: <boolean>
+      skipSchemaValidation: <boolean>
+      skipTests: <boolean>
+      valueFiles: <[]string>
+      values: <string>
+      valuesObject: <Object>
+      version: <string>
+    kustomize: <Object>
+      apiVersions: <[]string>
+      commonAnnotations: <map[string]string>
+      commonAnnotationsEnvsubst: <boolean>
+      commonLabels: <map[string]string>
+      components: <[]string>
+      forceCommonAnnotations: <boolean>
+      forceCommonLabels: <boolean>
+      ignoreMissingComponents: <boolean>
+      images: <[]string>
+      kubeVersion: <string>
+      labelIncludeTemplates: <boolean>
+      labelWithoutSelector: <boolean>
+      namePrefix: <string>
+      nameSuffix: <string>
+      namespace: <string>
+      patches: <[]Object>
+        options: <map[string]boolean>
+        patch: <string>
+        path: <string>
+        target: <Object>
+          annotationSelector: <string>
+          group: <string>
+          kind: <string>
+          labelSelector: <string>
+          name: <string>
+          namespace: <string>
+          version: <string>
+      replicas: <[]Object>
+        count: <Object> -required-
+        name: <string> -required-
+      version: <string>
+    name: <string>
+    path: <string>
+    plugin: <Object>
+      env: <[]Object>
+        name: <string> -required-
+        value: <string> -required-
+      name: <string>
+      parameters: <[]Object>
+        array: <[]string>
+        map: <map[string]string>
+        name: <string>
+        string: <string>
+    ref: <string>
+    repoURL: <string> -required-
+    targetRevision: <string>
+  sourceHydrator: <Object>
+    drySource: <Object> -required-
+      path: <string> -required-
+      repoURL: <string> -required-
+      targetRevision: <string> -required-
+    hydrateTo: <Object>
+      targetBranch: <string> -required-
+    syncSource: <Object> -required-
+      path: <string> -required-
+      targetBranch: <string> -required-
+  sources: <[]Object>
+    chart: <string>
+    directory: <Object>
+      exclude: <string>
+      include: <string>
+      jsonnet: <Object>
+        extVars: <[]Object>
+          code: <boolean>
+          name: <string> -required-
+          value: <string> -required-
+        libs: <[]string>
+        tlas: <[]Object>
+          code: <boolean>
+          name: <string> -required-
+          value: <string> -required-
+      recurse: <boolean>
+    helm: <Object>
+      apiVersions: <[]string>
+      fileParameters: <[]Object>
+        name: <string>
+        path: <string>
+      ignoreMissingValueFiles: <boolean>
+      kubeVersion: <string>
+      namespace: <string>
+      parameters: <[]Object>
+        forceString: <boolean>
+        name: <string>
+        value: <string>
+      passCredentials: <boolean>
+      releaseName: <string>
+      skipCrds: <boolean>
+      skipSchemaValidation: <boolean>
+      skipTests: <boolean>
+      valueFiles: <[]string>
+      values: <string>
+      valuesObject: <Object>
+      version: <string>
+    kustomize: <Object>
+      apiVersions: <[]string>
+      commonAnnotations: <map[string]string>
+      commonAnnotationsEnvsubst: <boolean>
+      commonLabels: <map[string]string>
+      components: <[]string>
+      forceCommonAnnotations: <boolean>
+      forceCommonLabels: <boolean>
+      ignoreMissingComponents: <boolean>
+      images: <[]string>
+      kubeVersion: <string>
+      labelIncludeTemplates: <boolean>
+      labelWithoutSelector: <boolean>
+      namePrefix: <string>
+      nameSuffix: <string>
+      namespace: <string>
+      patches: <[]Object>
+        options: <map[string]boolean>
+        patch: <string>
+        path: <string>
+        target: <Object>
+          annotationSelector: <string>
+          group: <string>
+          kind: <string>
+          labelSelector: <string>
+          name: <string>
+          namespace: <string>
+          version: <string>
+      replicas: <[]Object>
+        count: <Object> -required-
+        name: <string> -required-
+      version: <string>
+    name: <string>
+    path: <string>
+    plugin: <Object>
+      env: <[]Object>
+        name: <string> -required-
+        value: <string> -required-
+      name: <string>
+      parameters: <[]Object>
+        array: <[]string>
+        map: <map[string]string>
+        name: <string>
+        string: <string>
+    ref: <string>
+    repoURL: <string> -required-
+    targetRevision: <string>
+  syncPolicy: <Object>
+    automated: <Object>
+      allowEmpty: <boolean>
+      enabled: <boolean>
+      prune: <boolean>
+      selfHeal: <boolean>
+    managedNamespaceMetadata: <Object>
+      annotations: <map[string]string>
+      labels: <map[string]string>
+    retry: <Object>
+      backoff: <Object>
+        duration: <string>
+        factor: <integer>
+        maxDuration: <string>
+      limit: <integer>
+    syncOptions: <[]string>
+status: <Object>
+  conditions: <[]Object>
+    lastTransitionTime: <string>
+    message: <string> -required-
+    type: <string> -required-
+  controllerNamespace: <string>
+  health: <Object>
+    lastTransitionTime: <string>
+    message: <string>
+    status: <string>
+  history: <[]Object>
+    deployStartedAt: <string>
+    deployedAt: <string> -required-
+    id: <integer> -required-
+    initiatedBy: <Object>
+      automated: <boolean>
+      username: <string>
+    revision: <string>
+    revisions: <[]string>
+    source: <Object>
+      chart: <string>
+      directory: <Object>
+        exclude: <string>
+        include: <string>
+        jsonnet: <Object>
+          extVars: <[]Object>
+            code: <boolean>
+            name: <string> -required-
+            value: <string> -required-
+          libs: <[]string>
+          tlas: <[]Object>
+            code: <boolean>
+            name: <string> -required-
+            value: <string> -required-
+        recurse: <boolean>
+      helm: <Object>
+        apiVersions: <[]string>
+        fileParameters: <[]Object>
+          name: <string>
+          path: <string>
+        ignoreMissingValueFiles: <boolean>
+        kubeVersion: <string>
+        namespace: <string>
+        parameters: <[]Object>
+          forceString: <boolean>
+          name: <string>
+          value: <string>
+        passCredentials: <boolean>
+        releaseName: <string>
+        skipCrds: <boolean>
+        skipSchemaValidation: <boolean>
+        skipTests: <boolean>
+        valueFiles: <[]string>
+        values: <string>
+        valuesObject: <Object>
+        version: <string>
+      kustomize: <Object>
+        apiVersions: <[]string>
+        commonAnnotations: <map[string]string>
+        commonAnnotationsEnvsubst: <boolean>
+        commonLabels: <map[string]string>
+        components: <[]string>
+        forceCommonAnnotations: <boolean>
+        forceCommonLabels: <boolean>
+        ignoreMissingComponents: <boolean>
+        images: <[]string>
+        kubeVersion: <string>
+        labelIncludeTemplates: <boolean>
+        labelWithoutSelector: <boolean>
+        namePrefix: <string>
+        nameSuffix: <string>
+        namespace: <string>
+        patches: <[]Object>
+          options: <map[string]boolean>
+          patch: <string>
+          path: <string>
+          target: <Object>
+            annotationSelector: <string>
+            group: <string>
+            kind: <string>
+            labelSelector: <string>
+            name: <string>
+            namespace: <string>
+            version: <string>
+        replicas: <[]Object>
+          count: <Object> -required-
+          name: <string> -required-
+        version: <string>
+      name: <string>
+      path: <string>
+      plugin: <Object>
+        env: <[]Object>
+          name: <string> -required-
+          value: <string> -required-
+        name: <string>
+        parameters: <[]Object>
+          array: <[]string>
+          map: <map[string]string>
+          name: <string>
+          string: <string>
+      ref: <string>
+      repoURL: <string> -required-
+      targetRevision: <string>
+    sources: <[]Object>
+      chart: <string>
+      directory: <Object>
+        exclude: <string>
+        include: <string>
+        jsonnet: <Object>
+          extVars: <[]Object>
+            code: <boolean>
+            name: <string> -required-
+            value: <string> -required-
+          libs: <[]string>
+          tlas: <[]Object>
+            code: <boolean>
+            name: <string> -required-
+            value: <string> -required-
+        recurse: <boolean>
+      helm: <Object>
+        apiVersions: <[]string>
+        fileParameters: <[]Object>
+          name: <string>
+          path: <string>
+        ignoreMissingValueFiles: <boolean>
+        kubeVersion: <string>
+        namespace: <string>
+        parameters: <[]Object>
+          forceString: <boolean>
+          name: <string>
+          value: <string>
+        passCredentials: <boolean>
+        releaseName: <string>
+        skipCrds: <boolean>
+        skipSchemaValidation: <boolean>
+        skipTests: <boolean>
+        valueFiles: <[]string>
+        values: <string>
+        valuesObject: <Object>
+        version: <string>
+      kustomize: <Object>
+        apiVersions: <[]string>
+        commonAnnotations: <map[string]string>
+        commonAnnotationsEnvsubst: <boolean>
+        commonLabels: <map[string]string>
+        components: <[]string>
+        forceCommonAnnotations: <boolean>
+        forceCommonLabels: <boolean>
+        ignoreMissingComponents: <boolean>
+        images: <[]string>
+        kubeVersion: <string>
+        labelIncludeTemplates: <boolean>
+        labelWithoutSelector: <boolean>
+        namePrefix: <string>
+        nameSuffix: <string>
+        namespace: <string>
+        patches: <[]Object>
+          options: <map[string]boolean>
+          patch: <string>
+          path: <string>
+          target: <Object>
+            annotationSelector: <string>
+            group: <string>
+            kind: <string>
+            labelSelector: <string>
+            name: <string>
+            namespace: <string>
+            version: <string>
+        replicas: <[]Object>
+          count: <Object> -required-
+          name: <string> -required-
+        version: <string>
+      name: <string>
+      path: <string>
+      plugin: <Object>
+        env: <[]Object>
+          name: <string> -required-
+          value: <string> -required-
+        name: <string>
+        parameters: <[]Object>
+          array: <[]string>
+          map: <map[string]string>
+          name: <string>
+          string: <string>
+      ref: <string>
+      repoURL: <string> -required-
+      targetRevision: <string>
+  observedAt: <string>
+  operationState: <Object>
+    finishedAt: <string>
+    message: <string>
+    operation: <Object> -required-
+      info: <[]Object>
+        name: <string> -required-
+        value: <string> -required-
+      initiatedBy: <Object>
+        automated: <boolean>
+        username: <string>
+      retry: <Object>
+        backoff: <Object>
+          duration: <string>
+          factor: <integer>
+          maxDuration: <string>
+        limit: <integer>
+      sync: <Object>
+        autoHealAttemptsCount: <integer>
+        dryRun: <boolean>
+        manifests: <[]string>
+        prune: <boolean>
+        resources: <[]Object>
+          group: <string>
+          kind: <string> -required-
+          name: <string> -required-
+          namespace: <string>
+        revision: <string>
+        revisions: <[]string>
+        source: <Object>
+          chart: <string>
+          directory: <Object>
+            exclude: <string>
+            include: <string>
+            jsonnet: <Object>
+              extVars: <[]Object>
+                code: <boolean>
+                name: <string> -required-
+                value: <string> -required-
+              libs: <[]string>
+              tlas: <[]Object>
+                code: <boolean>
+                name: <string> -required-
+                value: <string> -required-
+            recurse: <boolean>
+          helm: <Object>
+            apiVersions: <[]string>
+            fileParameters: <[]Object>
+              name: <string>
+              path: <string>
+            ignoreMissingValueFiles: <boolean>
+            kubeVersion: <string>
+            namespace: <string>
+            parameters: <[]Object>
+              forceString: <boolean>
+              name: <string>
+              value: <string>
+            passCredentials: <boolean>
+            releaseName: <string>
+            skipCrds: <boolean>
+            skipSchemaValidation: <boolean>
+            skipTests: <boolean>
+            valueFiles: <[]string>
+            values: <string>
+            valuesObject: <Object>
+            version: <string>
+          kustomize: <Object>
+            apiVersions: <[]string>
+            commonAnnotations: <map[string]string>
+            commonAnnotationsEnvsubst: <boolean>
+            commonLabels: <map[string]string>
+            components: <[]string>
+            forceCommonAnnotations: <boolean>
+            forceCommonLabels: <boolean>
+            ignoreMissingComponents: <boolean>
+            images: <[]string>
+            kubeVersion: <string>
+            labelIncludeTemplates: <boolean>
+            labelWithoutSelector: <boolean>
+            namePrefix: <string>
+            nameSuffix: <string>
+            namespace: <string>
+            patches: <[]Object>
+              options: <map[string]boolean>
+              patch: <string>
+              path: <string>
+              target: <Object>
+                annotationSelector: <string>
+                group: <string>
+                kind: <string>
+                labelSelector: <string>
+                name: <string>
+                namespace: <string>
+                version: <string>
+            replicas: <[]Object>
+              count: <Object> -required-
+              name: <string> -required-
+            version: <string>
+          name: <string>
+          path: <string>
+          plugin: <Object>
+            env: <[]Object>
+              name: <string> -required-
+              value: <string> -required-
+            name: <string>
+            parameters: <[]Object>
+              array: <[]string>
+              map: <map[string]string>
+              name: <string>
+              string: <string>
+          ref: <string>
+          repoURL: <string> -required-
+          targetRevision: <string>
+        sources: <[]Object>
+          chart: <string>
+          directory: <Object>
+            exclude: <string>
+            include: <string>
+            jsonnet: <Object>
+              extVars: <[]Object>
+                code: <boolean>
+                name: <string> -required-
+                value: <string> -required-
+              libs: <[]string>
+              tlas: <[]Object>
+                code: <boolean>
+                name: <string> -required-
+                value: <string> -required-
+            recurse: <boolean>
+          helm: <Object>
+            apiVersions: <[]string>
+            fileParameters: <[]Object>
+              name: <string>
+              path: <string>
+            ignoreMissingValueFiles: <boolean>
+            kubeVersion: <string>
+            namespace: <string>
+            parameters: <[]Object>
+              forceString: <boolean>
+              name: <string>
+              value: <string>
+            passCredentials: <boolean>
+            releaseName: <string>
+            skipCrds: <boolean>
+            skipSchemaValidation: <boolean>
+            skipTests: <boolean>
+            valueFiles: <[]string>
+            values: <string>
+            valuesObject: <Object>
+            version: <string>
+          kustomize: <Object>
+            apiVersions: <[]string>
+            commonAnnotations: <map[string]string>
+            commonAnnotationsEnvsubst: <boolean>
+            commonLabels: <map[string]string>
+            components: <[]string>
+            forceCommonAnnotations: <boolean>
+            forceCommonLabels: <boolean>
+            ignoreMissingComponents: <boolean>
+            images: <[]string>
+            kubeVersion: <string>
+            labelIncludeTemplates: <boolean>
+            labelWithoutSelector: <boolean>
+            namePrefix: <string>
+            nameSuffix: <string>
+            namespace: <string>
+            patches: <[]Object>
+              options: <map[string]boolean>
+              patch: <string>
+              path: <string>
+              target: <Object>
+                annotationSelector: <string>
+                group: <string>
+                kind: <string>
+                labelSelector: <string>
+                name: <string>
+                namespace: <string>
+                version: <string>
+            replicas: <[]Object>
+              count: <Object> -required-
+              name: <string> -required-
+            version: <string>
+          name: <string>
+          path: <string>
+          plugin: <Object>
+            env: <[]Object>
+              name: <string> -required-
+              value: <string> -required-
+            name: <string>
+            parameters: <[]Object>
+              array: <[]string>
+              map: <map[string]string>
+              name: <string>
+              string: <string>
+          ref: <string>
+          repoURL: <string> -required-
+          targetRevision: <string>
+        syncOptions: <[]string>
+        syncStrategy: <Object>
+          apply: <Object>
+            force: <boolean>
+          hook: <Object>
+            force: <boolean>
+    phase: <string> -required-
+    retryCount: <integer>
+    startedAt: <string> -required-
+    syncResult: <Object>
+      managedNamespaceMetadata: <Object>
+        annotations: <map[string]string>
+        labels: <map[string]string>
+      resources: <[]Object>
+        group: <string> -required-
+        hookPhase: <string>
+        hookType: <string>
+        images: <[]string>
+        kind: <string> -required-
+        message: <string>
+        name: <string> -required-
+        namespace: <string> -required-
+        status: <string>
+        syncPhase: <string>
+        version: <string> -required-
+      revision: <string> -required-
+      revisions: <[]string>
+      source: <Object>
+        chart: <string>
+        directory: <Object>
+          exclude: <string>
+          include: <string>
+          jsonnet: <Object>
+            extVars: <[]Object>
+              code: <boolean>
+              name: <string> -required-
+              value: <string> -required-
+            libs: <[]string>
+            tlas: <[]Object>
+              code: <boolean>
+              name: <string> -required-
+              value: <string> -required-
+          recurse: <boolean>
+        helm: <Object>
+          apiVersions: <[]string>
+          fileParameters: <[]Object>
+            name: <string>
+            path: <string>
+          ignoreMissingValueFiles: <boolean>
+          kubeVersion: <string>
+          namespace: <string>
+          parameters: <[]Object>
+            forceString: <boolean>
+            name: <string>
+            value: <string>
+          passCredentials: <boolean>
+          releaseName: <string>
+          skipCrds: <boolean>
+          skipSchemaValidation: <boolean>
+          skipTests: <boolean>
+          valueFiles: <[]string>
+          values: <string>
+          valuesObject: <Object>
+          version: <string>
+        kustomize: <Object>
+          apiVersions: <[]string>
+          commonAnnotations: <map[string]string>
+          commonAnnotationsEnvsubst: <boolean>
+          commonLabels: <map[string]string>
+          components: <[]string>
+          forceCommonAnnotations: <boolean>
+          forceCommonLabels: <boolean>
+          ignoreMissingComponents: <boolean>
+          images: <[]string>
+          kubeVersion: <string>
+          labelIncludeTemplates: <boolean>
+          labelWithoutSelector: <boolean>
+          namePrefix: <string>
+          nameSuffix: <string>
+          namespace: <string>
+          patches: <[]Object>
+            options: <map[string]boolean>
+            patch: <string>
+            path: <string>
+            target: <Object>
+              annotationSelector: <string>
+              group: <string>
+              kind: <string>
+              labelSelector: <string>
+              name: <string>
+              namespace: <string>
+              version: <string>
+          replicas: <[]Object>
+            count: <Object> -required-
+            name: <string> -required-
+          version: <string>
+        name: <string>
+        path: <string>
+        plugin: <Object>
+          env: <[]Object>
+            name: <string> -required-
+            value: <string> -required-
+          name: <string>
+          parameters: <[]Object>
+            array: <[]string>
+            map: <map[string]string>
+            name: <string>
+            string: <string>
+        ref: <string>
+        repoURL: <string> -required-
+        targetRevision: <string>
+      sources: <[]Object>
+        chart: <string>
+        directory: <Object>
+          exclude: <string>
+          include: <string>
+          jsonnet: <Object>
+            extVars: <[]Object>
+              code: <boolean>
+              name: <string> -required-
+              value: <string> -required-
+            libs: <[]string>
+            tlas: <[]Object>
+              code: <boolean>
+              name: <string> -required-
+              value: <string> -required-
+          recurse: <boolean>
+        helm: <Object>
+          apiVersions: <[]string>
+          fileParameters: <[]Object>
+            name: <string>
+            path: <string>
+          ignoreMissingValueFiles: <boolean>
+          kubeVersion: <string>
+          namespace: <string>
+          parameters: <[]Object>
+            forceString: <boolean>
+            name: <string>
+            value: <string>
+          passCredentials: <boolean>
+          releaseName: <string>
+          skipCrds: <boolean>
+          skipSchemaValidation: <boolean>
+          skipTests: <boolean>
+          valueFiles: <[]string>
+          values: <string>
+          valuesObject: <Object>
+          version: <string>
+        kustomize: <Object>
+          apiVersions: <[]string>
+          commonAnnotations: <map[string]string>
+          commonAnnotationsEnvsubst: <boolean>
+          commonLabels: <map[string]string>
+          components: <[]string>
+          forceCommonAnnotations: <boolean>
+          forceCommonLabels: <boolean>
+          ignoreMissingComponents: <boolean>
+          images: <[]string>
+          kubeVersion: <string>
+          labelIncludeTemplates: <boolean>
+          labelWithoutSelector: <boolean>
+          namePrefix: <string>
+          nameSuffix: <string>
+          namespace: <string>
+          patches: <[]Object>
+            options: <map[string]boolean>
+            patch: <string>
+            path: <string>
+            target: <Object>
+              annotationSelector: <string>
+              group: <string>
+              kind: <string>
+              labelSelector: <string>
+              name: <string>
+              namespace: <string>
+              version: <string>
+          replicas: <[]Object>
+            count: <Object> -required-
+            name: <string> -required-
+          version: <string>
+        name: <string>
+        path: <string>
+        plugin: <Object>
+          env: <[]Object>
+            name: <string> -required-
+            value: <string> -required-
+          name: <string>
+          parameters: <[]Object>
+            array: <[]string>
+            map: <map[string]string>
+            name: <string>
+            string: <string>
+        ref: <string>
+        repoURL: <string> -required-
+        targetRevision: <string>
+  reconciledAt: <string>
+  resourceHealthSource: <string>
+  resources: <[]Object>
+    group: <string>
+    health: <Object>
+      lastTransitionTime: <string>
+      message: <string>
+      status: <string>
+    hook: <boolean>
+    kind: <string>
+    name: <string>
+    namespace: <string>
+    requiresDeletionConfirmation: <boolean>
+    requiresPruning: <boolean>
+    status: <string>
+    syncWave: <integer>
+    version: <string>
+  sourceHydrator: <Object>
+    currentOperation: <Object>
+      drySHA: <string>
+      finishedAt: <string>
+      hydratedSHA: <string>
+      message: <string> -required-
+      phase: <string> -required-
+      enum: Hydrating, Failed, Hydrated
+      sourceHydrator: <Object>
+        drySource: <Object> -required-
+          path: <string> -required-
+          repoURL: <string> -required-
+          targetRevision: <string> -required-
+        hydrateTo: <Object>
+          targetBranch: <string> -required-
+        syncSource: <Object> -required-
+          path: <string> -required-
+          targetBranch: <string> -required-
+      startedAt: <string>
+    lastSuccessfulOperation: <Object>
+      drySHA: <string>
+      hydratedSHA: <string>
+      sourceHydrator: <Object>
+        drySource: <Object> -required-
+          path: <string> -required-
+          repoURL: <string> -required-
+          targetRevision: <string> -required-
+        hydrateTo: <Object>
+          targetBranch: <string> -required-
+        syncSource: <Object> -required-
+          path: <string> -required-
+          targetBranch: <string> -required-
+  sourceType: <string>
+  sourceTypes: <[]string>
+  summary: <Object>
+    externalURLs: <[]string>
+    images: <[]string>
+  sync: <Object>
+    comparedTo: <Object>
+      destination: <Object> -required-
+        name: <string>
+        namespace: <string>
+        server: <string>
+      ignoreDifferences: <[]Object>
+        group: <string>
+        jqPathExpressions: <[]string>
+        jsonPointers: <[]string>
+        kind: <string> -required-
+        managedFieldsManagers: <[]string>
+        name: <string>
+        namespace: <string>
+      source: <Object>
+        chart: <string>
+        directory: <Object>
+          exclude: <string>
+          include: <string>
+          jsonnet: <Object>
+            extVars: <[]Object>
+              code: <boolean>
+              name: <string> -required-
+              value: <string> -required-
+            libs: <[]string>
+            tlas: <[]Object>
+              code: <boolean>
+              name: <string> -required-
+              value: <string> -required-
+          recurse: <boolean>
+        helm: <Object>
+          apiVersions: <[]string>
+          fileParameters: <[]Object>
+            name: <string>
+            path: <string>
+          ignoreMissingValueFiles: <boolean>
+          kubeVersion: <string>
+          namespace: <string>
+          parameters: <[]Object>
+            forceString: <boolean>
+            name: <string>
+            value: <string>
+          passCredentials: <boolean>
+          releaseName: <string>
+          skipCrds: <boolean>
+          skipSchemaValidation: <boolean>
+          skipTests: <boolean>
+          valueFiles: <[]string>
+          values: <string>
+          valuesObject: <Object>
+          version: <string>
+        kustomize: <Object>
+          apiVersions: <[]string>
+          commonAnnotations: <map[string]string>
+          commonAnnotationsEnvsubst: <boolean>
+          commonLabels: <map[string]string>
+          components: <[]string>
+          forceCommonAnnotations: <boolean>
+          forceCommonLabels: <boolean>
+          ignoreMissingComponents: <boolean>
+          images: <[]string>
+          kubeVersion: <string>
+          labelIncludeTemplates: <boolean>
+          labelWithoutSelector: <boolean>
+          namePrefix: <string>
+          nameSuffix: <string>
+          namespace: <string>
+          patches: <[]Object>
+            options: <map[string]boolean>
+            patch: <string>
+            path: <string>
+            target: <Object>
+              annotationSelector: <string>
+              group: <string>
+              kind: <string>
+              labelSelector: <string>
+              name: <string>
+              namespace: <string>
+              version: <string>
+          replicas: <[]Object>
+            count: <Object> -required-
+            name: <string> -required-
+          version: <string>
+        name: <string>
+        path: <string>
+        plugin: <Object>
+          env: <[]Object>
+            name: <string> -required-
+            value: <string> -required-
+          name: <string>
+          parameters: <[]Object>
+            array: <[]string>
+            map: <map[string]string>
+            name: <string>
+            string: <string>
+        ref: <string>
+        repoURL: <string> -required-
+        targetRevision: <string>
+      sources: <[]Object>
+        chart: <string>
+        directory: <Object>
+          exclude: <string>
+          include: <string>
+          jsonnet: <Object>
+            extVars: <[]Object>
+              code: <boolean>
+              name: <string> -required-
+              value: <string> -required-
+            libs: <[]string>
+            tlas: <[]Object>
+              code: <boolean>
+              name: <string> -required-
+              value: <string> -required-
+          recurse: <boolean>
+        helm: <Object>
+          apiVersions: <[]string>
+          fileParameters: <[]Object>
+            name: <string>
+            path: <string>
+          ignoreMissingValueFiles: <boolean>
+          kubeVersion: <string>
+          namespace: <string>
+          parameters: <[]Object>
+            forceString: <boolean>
+            name: <string>
+            value: <string>
+          passCredentials: <boolean>
+          releaseName: <string>
+          skipCrds: <boolean>
+          skipSchemaValidation: <boolean>
+          skipTests: <boolean>
+          valueFiles: <[]string>
+          values: <string>
+          valuesObject: <Object>
+          version: <string>
+        kustomize: <Object>
+          apiVersions: <[]string>
+          commonAnnotations: <map[string]string>
+          commonAnnotationsEnvsubst: <boolean>
+          commonLabels: <map[string]string>
+          components: <[]string>
+          forceCommonAnnotations: <boolean>
+          forceCommonLabels: <boolean>
+          ignoreMissingComponents: <boolean>
+          images: <[]string>
+          kubeVersion: <string>
+          labelIncludeTemplates: <boolean>
+          labelWithoutSelector: <boolean>
+          namePrefix: <string>
+          nameSuffix: <string>
+          namespace: <string>
+          patches: <[]Object>
+            options: <map[string]boolean>
+            patch: <string>
+            path: <string>
+            target: <Object>
+              annotationSelector: <string>
+              group: <string>
+              kind: <string>
+              labelSelector: <string>
+              name: <string>
+              namespace: <string>
+              version: <string>
+          replicas: <[]Object>
+            count: <Object> -required-
+            name: <string> -required-
+          version: <string>
+        name: <string>
+        path: <string>
+        plugin: <Object>
+          env: <[]Object>
+            name: <string> -required-
+            value: <string> -required-
+          name: <string>
+          parameters: <[]Object>
+            array: <[]string>
+            map: <map[string]string>
+            name: <string>
+            string: <string>
+        ref: <string>
+        repoURL: <string> -required-
+        targetRevision: <string>
+    revision: <string>
+    revisions: <[]string>
+    status: <string> -required-
