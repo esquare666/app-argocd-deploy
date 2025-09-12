@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name:  python-flask
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/esquare666/app-argocd-deploy.git
+    path: dev
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: my-apps
+  syncPolicy:
+    syncOptions:
+      - ServerSideApply=true
+      - CreateNamespace=true
+      - ApplyOutOfSyncOnly=true
+      - PruneLast=true
+    automated:
+      allowEmpty: false
+      enabled: true
+      prune: false #Prune specifies whether to delete resources from the cluster that are not found in the sources anymore as part of automated sync (default: false)
+      selfHeal: false #SelfHeal specifies whether to revert resources back to their desired state upon modification in the cluster (default: false)
