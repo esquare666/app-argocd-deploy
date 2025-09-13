@@ -20,6 +20,6 @@ spec:
       - PruneLast=true
     automated:
       allowEmpty: false
-      enabled: true
+      enabled: false #Auto Sync Enabled or not
       prune: false #Prune specifies whether to delete resources from the cluster that are not found in the sources anymore as part of automated sync (default: false)
       selfHeal: false #SelfHeal specifies whether to revert resources back to their desired state upon modification in the cluster (default: false)
